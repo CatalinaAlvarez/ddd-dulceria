@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class Venta extends Entity<VentaId> {
 
-    protected Set<ProductoId>;
+    protected Set<ProductoId> productos;
     protected TiendaId tiendaId;
     protected CajeroId cajeroId;
     protected VendedorId vendedorId;
