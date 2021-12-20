@@ -5,11 +5,17 @@ import co.com.sofka.dulceria.generics.Nombre;
 import co.com.sofka.dulceria.generics.Email;
 import co.com.sofka.dulceria.personal.value.VendedorId;
 
+import java.util.Objects;
+
 public class Vendedor extends Entity<VendedorId>{
     protected Nombre nombre;
     protected Email email;
 
-    public Vendedor(VendedorId entityId) {
+
+    public Vendedor(VendedorId entityId, Nombre nombre, Email email) {
         super(entityId);
+        this.nombre = Objects.requireNonNull(nombre);
+        this.email = Objects.requireNonNull(email);
     }
 }
+
