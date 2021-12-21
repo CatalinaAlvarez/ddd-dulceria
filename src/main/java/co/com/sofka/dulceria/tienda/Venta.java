@@ -1,7 +1,6 @@
 package co.com.sofka.dulceria.tienda;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.dulceria.inventario.value.Cantidad;
 import co.com.sofka.dulceria.inventario.value.ProductoId;
 import co.com.sofka.dulceria.personal.value.CajeroId;
 import co.com.sofka.dulceria.personal.value.VendedorId;
