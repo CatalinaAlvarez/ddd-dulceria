@@ -16,7 +16,6 @@ public class Venta extends Entity<VentaId> {
     protected CajeroId cajeroId;
     protected VendedorId vendedorId;
     protected ClienteId clienteId;
-    protected Factura factura;
     protected Total total;
 
 
@@ -24,13 +23,12 @@ public class Venta extends Entity<VentaId> {
         super(entityId);
     }
 
-    public Venta(VentaId entityId, TiendaId tiendaId, CajeroId cajeroId, VendedorId vendedorId, ClienteId clienteId, Factura factura, Total total) {
+    public Venta(VentaId entityId, TiendaId tiendaId, CajeroId cajeroId, VendedorId vendedorId, ClienteId clienteId, Total total) {
         super(entityId);
         this.tiendaId = Objects.requireNonNull(tiendaId);
         this.cajeroId = Objects.requireNonNull(cajeroId);
         this.vendedorId = Objects.requireNonNull(vendedorId);
         this.clienteId = Objects.requireNonNull(clienteId);
-        this.factura = Objects.requireNonNull(factura);
         this.total = Objects.requireNonNull(total);
         //AQUI USAR EL DE HASHSET CON UNA COSA YA LISTA
     }
@@ -53,10 +51,6 @@ public class Venta extends Entity<VentaId> {
 
     public ClienteId clienteId() {
         return clienteId;
-    }
-
-    public Factura factura() {
-        return factura;
     }
 
     public Total total() {
