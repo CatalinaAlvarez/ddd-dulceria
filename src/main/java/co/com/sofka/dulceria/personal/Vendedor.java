@@ -18,6 +18,13 @@ public class Vendedor extends Entity<VendedorId>{
         this.email = Objects.requireNonNull(email);
     }
 
+    public void actualizarNombre(Nombre nombre){
+        this.nombre = Objects.requireNonNull(nombre);
+    }
+    public void actualizarEmail(Email email){
+        this.email = Objects.requireNonNull(email);
+    }
+
     public Nombre nombre() {
         return nombre;
     }

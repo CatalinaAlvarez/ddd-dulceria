@@ -91,4 +91,8 @@ public class Inventario extends AggregateEvent<InventarioId> {
     public Set<Producto> productos() {
         return productos;
     }
+
+    public Nombre nombre() {
+        return nombre;
+    }
 }
