@@ -65,22 +65,32 @@ public class Tienda extends AggregateEvent<TiendaId> {
     }
 
     public void actualizarLocacion(TiendaId entityId, Locacion locacion){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(locacion);
         appendChange(new LocacionActualizada(entityId, locacion)).apply();
     }
 
     public void agregarProductoVenta(VentaId entityId, ProductoId productoId){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(productoId);
         appendChange(new ProductoAgregadoAVenta(entityId, productoId)).apply();
     }
 
     public void actualizarTotalVenta(VentaId entityId, Total total){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(total);
         appendChange(new TotalVentaActualizado(entityId, total)).apply();
     }
 
     public void actualizarNombreCliente(ClienteId entityId, Nombre nombre){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(nombre);
         appendChange(new NombreClienteActualizado(entityId, nombre)).apply();
     }
 
     public void actualizarEmailCliente(ClienteId entityId, Email email){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(email);
         appendChange(new EmailClienteActualizado(entityId, email)).apply();
     }
 

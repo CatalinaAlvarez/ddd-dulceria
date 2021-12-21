@@ -56,26 +56,38 @@ public class Personal extends AggregateEvent<PersonalId> {
     }
 
     public void actualizarNombreVendedor(VendedorId entityId, Nombre nombre){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(nombre);
         appendChange(new NombreVendedorActualizado(entityId, nombre)).apply();
     }
 
     public void actualizarEmailVendedor(VendedorId entityId, Email email){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(email);
         appendChange(new EmailVendedorActualizado(entityId, email)).apply();
     }
 
     public void actualizarNombreCajero(CajeroId entityId, Nombre nombre){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(nombre);
         appendChange(new NombreCajeroActualizado(entityId, nombre)).apply();
     }
 
     public void actualizarEmailCajero(CajeroId entityId, Email email){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(email);
         appendChange(new EmailCajeroActualizado(entityId, email)).apply();
     }
 
     public void actualizarNombreEncargado(EncargadoId entityId, Nombre nombre){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(nombre);
         appendChange(new NombreEncargadoActualizado(entityId, nombre)).apply();
     }
 
     public void actualizarEmailEncargado(EncargadoId entityId, Email email){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(email);
         appendChange(new EmailEncargadoActualizado(entityId, email)).apply();
     }
 

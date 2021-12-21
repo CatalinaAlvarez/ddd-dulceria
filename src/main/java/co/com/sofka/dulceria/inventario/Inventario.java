@@ -55,18 +55,26 @@ public class Inventario extends AggregateEvent<InventarioId> {
     }
 
     public void actualizarCantidadProducto(ProductoId entityId, Cantidad cantidad){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(cantidad);
         appendChange(new CantidadProductoActualizada(entityId, cantidad)).apply();
     }
 
     public void actualizarPrecioProducto(ProductoId entityId, Precio precio){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(precio);
         appendChange(new PrecioProductoActualizado(entityId, precio)).apply();
     }
 
     public void actualizarNombreProducto(ProductoId entityId, Nombre nombre){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(nombre);
         appendChange(new NombreProductoActualizado(entityId, nombre)).apply();
     }
 
     public void agregarProductoEstanteria(EstanteriaId entityId, ProductoId productoId){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(productoId);
         appendChange(new ProductoAgregadoAEstanteria(entityId, productoId)).apply();
     }
 
