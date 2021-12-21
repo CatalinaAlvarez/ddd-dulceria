@@ -1,27 +1,38 @@
 package co.com.sofka.dulceria.inventario;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.dulceria.generics.Nombre;
 import co.com.sofka.dulceria.inventario.event.*;
 import co.com.sofka.dulceria.inventario.value.*;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 public class Inventario extends AggregateEvent<InventarioId> {
 
+    protected Nombre nombre;
     protected Set<Estanteria> estanterias;
     protected Set<Producto> productos;
 
-    public Inventario(InventarioId entityId) {
+    public Inventario(InventarioId entityId, Nombre nombre) {
 
         super(entityId);
-        this.estanterias = new HashSet<>();
-        this.productos = new HashSet<>();
-        appendChange(new InventarioCreado(entityId)).apply();
+        this.estanterias = new HashSet<>(); //Validar
+        this.productos = new HashSet<>(); // validar
+        appendChange(new InventarioCreado(entityId, nombre)).apply();
         //Revisar agregados
+    }
+
+    private Inventario(InventarioId inventarioId){
+        super(inventarioId);
+        subscribe(new InventarioChange(this));
+
+    }
+
+    public static Inventario from(InventarioId inventarioId, List<DomainEvent> events){
+        var inventario = new Inventario(inventarioId);
+        events.forEach(inventario::applyEvent);
+        return inventario;
     }
 
     public void agregarEstanteria(EstanteriaId estanteriaId, Capacidad capacidad){
