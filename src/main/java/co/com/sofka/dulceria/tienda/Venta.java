@@ -30,11 +30,10 @@ public class Venta extends Entity<VentaId> {
         this.vendedorId = Objects.requireNonNull(vendedorId);
         this.clienteId = Objects.requireNonNull(clienteId);
         this.total = Objects.requireNonNull(total);
-        //AQUI USAR EL DE HASHSET CON UNA COSA YA LISTA
     }
 
     public void agregarProducto(ProductoId productoId){
-        this.productos.add(productoId); //REVISAR SI ESTÁ BIEN
+        this.productos.add(productoId);
     }
 
     public void actualizarTotal(Total total){

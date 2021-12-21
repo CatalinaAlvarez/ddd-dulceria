@@ -32,7 +32,7 @@ public class Personal extends AggregateEvent<PersonalId> {
         this.encargado = Objects.requireNonNull(encargado);
         this.vendedores = new HashSet<>();
         appendChange(new PersonalCreado(entityId, cajero, encargado)).apply();
-    } //VALORAR SI SE PUEDE HACER EL PRIMER ADD DEL SET PARA PEDIR UNO
+    }
 
     private Personal(PersonalId personalId){
         super(personalId);
@@ -50,8 +50,6 @@ public class Personal extends AggregateEvent<PersonalId> {
         Objects.requireNonNull(vendedorId);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(email);
-        //Vendedor vendedor = new Vendedor(vendedorId, nombre, email);
-        //this.vendedores.add(vendedor); REVISAR
         appendChange(new VendedorAgregado(vendedorId, nombre, email)).apply();
     }
 

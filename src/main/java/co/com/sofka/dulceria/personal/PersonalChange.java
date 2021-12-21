@@ -23,7 +23,7 @@ public class PersonalChange extends EventChange {
             ));
         });
 
-        apply((NombreCajeroActualizado event )->{ //VERIFICAR
+        apply((NombreCajeroActualizado event )->{
             personal.cajero.nombre = event.getNombre();
         });
 
@@ -31,7 +31,7 @@ public class PersonalChange extends EventChange {
             personal.cajero.email = event.getEmail();
         });
 
-        apply((NombreCajeroActualizado event )->{ //VERIFICAR
+        apply((NombreCajeroActualizado event )->{
             personal.cajero.nombre = event.getNombre();
         });
 

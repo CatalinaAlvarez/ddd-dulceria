@@ -17,10 +17,9 @@ public class Inventario extends AggregateEvent<InventarioId> {
     public Inventario(InventarioId entityId, Nombre nombre) {
 
         super(entityId);
-        this.estanterias = new HashSet<>(); //Validar
-        this.productos = new HashSet<>(); // validar
+        this.estanterias = new HashSet<>();
+        this.productos = new HashSet<>();
         appendChange(new InventarioCreado(entityId, nombre)).apply();
-        //Revisar agregados
     }
 
     private Inventario(InventarioId inventarioId){
@@ -38,8 +37,6 @@ public class Inventario extends AggregateEvent<InventarioId> {
     public void agregarEstanteria(EstanteriaId estanteriaId, Capacidad capacidad){
         Objects.requireNonNull(estanteriaId);
         Objects.requireNonNull(capacidad);
-        //Estanteria estanteria = new Estanteria(estanteriaId, capacidad);
-        //this.estanterias.add(estanteria); REVISAR
         appendChange(new EstanteriaAgregada(estanteriaId, capacidad)).apply();
     }
 
@@ -49,8 +46,6 @@ public class Inventario extends AggregateEvent<InventarioId> {
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(cantidad);
         Objects.requireNonNull(precio);
-        //Producto producto = new Producto(entityId, categoria, nombre, cantidad, precio);
-        //this.productos.add(producto); //REVISAR
         appendChange(new ProductoAgregado(entityId, categoria, nombre, cantidad, precio)).apply();
     }
 

@@ -21,11 +21,10 @@ public class Estanteria extends Entity<EstanteriaId> {
         super(entityId);
         this.capacidad = Objects.requireNonNull(capacidad);
         productosId = new HashSet<>();
-        //Revisar agregado
     }
 
     public void agregarProducto(ProductoId productoId){
-        this.productosId.add(productoId); //REVISAR SI ESTÁ BIEN
+        this.productosId.add(productoId);
     }
 
     public Capacidad capacidad() {

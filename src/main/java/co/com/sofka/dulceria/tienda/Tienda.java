@@ -50,8 +50,6 @@ public class Tienda extends AggregateEvent<TiendaId> {
         Objects.requireNonNull(cajeroId);
         Objects.requireNonNull(clienteId);
         Objects.requireNonNull(total);
-        //Venta venta = new Venta(entityId, tiendaId, cajeroId, vendedorId, clienteId, total);
-        //this.ventas.add(venta); REVISAR
         appendChange(new VentaAgregada(entityId, tiendaId, cajeroId, vendedorId, clienteId, total)).apply();
     }
 
@@ -59,8 +57,6 @@ public class Tienda extends AggregateEvent<TiendaId> {
         Objects.requireNonNull(entityId);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(email);
-        //Cliente cliente = new Venta(entityId, nombre, email);
-        //this.clientes.add(cliente); REVISAR
         appendChange(new ClienteAgregado(entityId, nombre, email)).apply();
     }
 
