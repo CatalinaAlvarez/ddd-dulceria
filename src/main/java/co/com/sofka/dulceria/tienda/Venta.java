@@ -1,6 +1,7 @@
 package co.com.sofka.dulceria.tienda;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofka.dulceria.inventario.value.Cantidad;
 import co.com.sofka.dulceria.inventario.value.ProductoId;
 import co.com.sofka.dulceria.personal.value.CajeroId;
 import co.com.sofka.dulceria.personal.value.VendedorId;
@@ -31,6 +32,14 @@ public class Venta extends Entity<VentaId> {
         this.clienteId = Objects.requireNonNull(clienteId);
         this.total = Objects.requireNonNull(total);
         //AQUI USAR EL DE HASHSET CON UNA COSA YA LISTA
+    }
+
+    public void agregarProducto(ProductoId productoId){
+        this.productos.add(productoId); //REVISAR SI ESTÁ BIEN
+    }
+
+    public void actualizarTotal(Total total){
+        this.total = Objects.requireNonNull(total);
     }
 
     public Set<ProductoId> productos() {
