@@ -1,6 +1,4 @@
 
-k
-;src/main/java/co/com/sofka/dulceria/tienda/value/Total.java,2\a\2a805b2f6afc7cb256e3eefd3fdb2df6ad6ad0dd
 z
 Jsrc/main/java/co/com/sofka/dulceria/inventario/event/ProductoAgregado.java,9\3\937289321bf27f35dbc109602ac32e62f3b1d7d9
 |
@@ -25,18 +23,12 @@ t
 Dsrc/main/java/co/com/sofka/dulceria/inventario/value/ProductoId.java,3\4\34dbd9a9972d9603ff60b74efdea15337e0198d5
 v
 Fsrc/main/java/co/com/sofka/dulceria/inventario/value/EstanteriaId.java,a\e\ae453d5103e1f71b29bf8e4d4031dae8ecdf4014
-p
-@src/main/java/co/com/sofka/dulceria/inventario/value/Precio.java,b\a\ba7296a073b37650461ed45243a6eef97995a6e4
-s
-Csrc/main/java/co/com/sofka/dulceria/inventario/value/Capacidad.java,6\7\67f8729ffe666c028e798f9f062938b5d9409f07
 r
 Bsrc/main/java/co/com/sofka/dulceria/inventario/value/Cantidad.java,c\7\c76c8b9f57d97f2be8ac76f7fe41c6b85290d604
 h
 8src/main/java/co/com/sofka/dulceria/personal/Cajero.java,9\f\9faae0ce91c3fd7cf908669d61f52a2fe7da20f9
 j
 :src/main/java/co/com/sofka/dulceria/personal/Vendedor.java,5\a\5a1bea374229184cd5fc5973fcb7e6eb2d17dd85
-z
-Jsrc/main/java/co/com/sofka/dulceria/inventario/event/InventarioCreado.java,6\6\6661a9282a52e69fac7b07d986e70b3c700d060c
 €
 Psrc/main/java/co/com/sofka/dulceria/personal/event/EmailVendedorActualizado.java,8\2\8263ac50eb08c1955940fd47486c6dc87c9645bc
 
@@ -51,8 +43,6 @@ Qsrc/main/java/co/com/sofka/dulceria/personal/event/EmailEncargadoActualizado.ja
 Usrc/main/java/co/com/sofka/dulceria/inventario/event/CantidadProductoActualizada.java,a\6\a6bcb12b326b9595d84ffc96209454172f5001d4
 v
 Fsrc/main/java/co/com/sofka/dulceria/personal/event/PersonalCreado.java,c\b\cba83e1ac1362669bc93a914dc54f02b1e047334
-{
-Ksrc/main/java/co/com/sofka/dulceria/inventario/command/CrearInventario.java,e\6\e687a15e63ca10cb84fff2f7583bfc83dc758037
 w
 Gsrc/main/java/co/com/sofka/dulceria/personal/command/CrearPersonal.java,5\6\568b60149ef705864b69c1ec0c9d37bf3eecadc3
 {
@@ -75,8 +65,6 @@ Psrc/main/java/co/com/sofka/dulceria/personal/command/ActualizarNombreCajero.jav
 Ssrc/main/java/co/com/sofka/dulceria/personal/command/ActualizarNombreEncargado.java,3\0\300d1a9edcd25e5f6e5ec9212b1cab780e090f46
 ‚
 Rsrc/main/java/co/com/sofka/dulceria/personal/command/ActualizarEmailEncargado.java,1\f\1f01fca1056a37def207aac92325ffda3152a5ac
-v
-Fsrc/main/java/co/com/sofka/dulceria/inventario/value/InventarioId.java,d\6\d662707568657dbafed8452bc5040a9dd0513dfa
 s
 Csrc/main/java/co/com/sofka/dulceria/personal/value/EncargadoId.java,8\7\8724a439977c6f9e41bec11111f692b7c4dfed87
 r
@@ -87,7 +75,5 @@ p
 @src/main/java/co/com/sofka/dulceria/personal/value/CajeroId.java,1\5\15fdf4f7bf3f7c1c092021cfa7e0ea900cc0e02c
 h
 8src/main/java/co/com/sofka/dulceria/generics/Nombre.java,d\6\d6b167c75f273d60bdda9c29fd895eacf0f81ebe
-s
-Csrc/main/java/co/com/sofka/dulceria/inventario/value/Categoria.java,d\8\d826dfa4f63b380fac97e83635ace25931f0f75e
 g
 7src/main/java/co/com/sofka/dulceria/generics/Email.java,9\9\990df275cc9ee4ad3222f8e59b747a3d2f8fe7bd
