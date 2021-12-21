@@ -19,4 +19,33 @@ public class Producto extends Entity<ProductoId> {
         this.cantidad = Objects.requireNonNull(cantidad);
         this.precio = Objects.requireNonNull(precio);
     }
+
+    public void actualizarCantidad(Cantidad cantidad){
+        this.cantidad = Objects.requireNonNull(cantidad);
+    }
+
+    public void actualizarPrecio(Precio precio){
+        this.precio = Objects.requireNonNull(precio);
+    }
+
+    public void actualizarNombre(Nombre nombre){
+        this.nombre = Objects.requireNonNull(nombre);
+    }
+
+
+    public Categoria categoria() {
+        return categoria;
+    }
+
+    public Nombre nombre() {
+        return nombre;
+    }
+
+    public Cantidad cantidad() {
+        return cantidad;
+    }
+
+    public Precio precio() {
+        return precio;
+    }
 }

@@ -29,4 +29,24 @@ public class Tienda extends AggregateEvent<TiendaId> {
         this.ventas = new HashSet<>();
         this.clientes = new HashSet<>();
     }
+
+    public Set<Venta> ventas() {
+        return ventas;
+    }
+
+    public Set<Cliente> clientes() {
+        return clientes;
+    }
+
+    public PersonalId personalId() {
+        return personalId;
+    }
+
+    public InventarioId inventarioId() {
+        return inventarioId;
+    }
+
+    public Locacion locacion() {
+        return locacion;
+    }
 }

@@ -34,4 +34,32 @@ public class Venta extends Entity<VentaId> {
         this.total = Objects.requireNonNull(total);
         //AQUI USAR EL DE HASHSET CON UNA COSA YA LISTA
     }
+
+    public Set<ProductoId> productos() {
+        return productos;
+    }
+
+    public TiendaId tiendaId() {
+        return tiendaId;
+    }
+
+    public CajeroId cajeroId() {
+        return cajeroId;
+    }
+
+    public VendedorId vendedorId() {
+        return vendedorId;
+    }
+
+    public ClienteId clienteId() {
+        return clienteId;
+    }
+
+    public Factura factura() {
+        return factura;
+    }
+
+    public Total total() {
+        return total;
+    }
 }

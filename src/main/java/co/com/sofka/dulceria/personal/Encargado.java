@@ -16,4 +16,12 @@ public class Encargado extends Entity<EncargadoId> {
         this.nombre = Objects.requireNonNull(nombre);
         this.email = Objects.requireNonNull(email);
     }
+
+    public Nombre nombre() {
+        return nombre;
+    }
+
+    public Email email() {
+        return email;
+    }
 }
