@@ -16,9 +16,9 @@ public class Email implements ValueObject<String> {
         if(this.value.length()<3){
             throw new IllegalArgumentException("El email no puede tener menos de cuatro caractéres");
         }
-//        if(!value.matches(){ //TERMINAR
-//            throw new IllegalArgumentException("El email no es válido");
-//        }
+        if (!value.matches("[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)@[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)(\\.[_A-Za-z]{2,})$")){
+            throw new IllegalArgumentException("El email no es válido");
+       }
     }
 
     @Override

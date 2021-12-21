@@ -75,5 +75,3 @@ p
 @src/main/java/co/com/sofka/dulceria/personal/value/CajeroId.java,1\5\15fdf4f7bf3f7c1c092021cfa7e0ea900cc0e02c
 h
 8src/main/java/co/com/sofka/dulceria/generics/Nombre.java,d\6\d6b167c75f273d60bdda9c29fd895eacf0f81ebe
-g
-7src/main/java/co/com/sofka/dulceria/generics/Email.java,9\9\990df275cc9ee4ad3222f8e59b747a3d2f8fe7bd
